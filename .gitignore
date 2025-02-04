@@ -1,0 +1,16 @@
+# Ignore all .log files
+*.log
+
+# Ignore all files in the temp directory
+temp/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+
+# Ignore data files
+*.csv
+*.json

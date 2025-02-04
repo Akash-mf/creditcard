@@ -1,0 +1,22 @@
+# 4. GitHub Workflow for Patterns(.github/workflows/main.yml)
+You can use file patterns in .github/workflows for automation (e.g., CI/CD) by specifying file paths to trigger actions.
+
+Example GitHub Action YAML (.github/workflows/main.yml):
+
+name: Run ETL Scripts
+
+on:
+  push:
+    paths:
+      - 'ETL/**'
+      - 'SQL_Queries/**'
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Run ETL Script
+        run: python ETL/extract_data.py
